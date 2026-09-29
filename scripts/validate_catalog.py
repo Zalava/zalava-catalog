@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import hashlib
+import io
 import re
 import sys
 import urllib.request
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,9 +71,38 @@ def verify_downloads(entries: list[dict[str, str]]) -> None:
     for entry in entries:
         url = f"{entry['repositoryUri']}/releases/download/{entry['releaseTag']}/{entry['assetName']}"
         with urllib.request.urlopen(url, timeout=30) as response:
-            digest = hashlib.file_digest(response, "sha256").hexdigest()
+            payload = response.read()
+        digest = hashlib.sha256(payload).hexdigest()
         if digest != entry["sha256"]:
             raise ValueError(f"{entry['id']}: digest mismatch ({digest})")
+        try:
+            with zipfile.ZipFile(io.BytesIO(payload)) as artifact:
+                metadata = artifact.read("module-metadata.yaml").decode("utf-8")
+                try:
+                    version = artifact.read("module.properties").decode("utf-8").strip()
+                    service = artifact.read(
+                        "META-INF/services/org.zalava.ZalavaModule"
+                    ).decode("utf-8").strip()
+                except KeyError:
+                    with zipfile.ZipFile(io.BytesIO(artifact.read("module.jar"))) as module:
+                        version = module.read("module.properties").decode("utf-8").strip()
+                        service = module.read(
+                            "META-INF/services/org.zalava.ZalavaModule"
+                        ).decode("utf-8").strip()
+        except (KeyError, UnicodeDecodeError, zipfile.BadZipFile) as error:
+            raise ValueError(f"{entry['id']}: missing valid module descriptor") from error
+        expected_module_id = f"moduleId: zalava-module-{entry['id']}"
+        expected_properties = (
+            version == f"module.version={entry['version']}"
+            or (
+                f"moduleId=zalava-module-{entry['id']}" in version
+                and f"version={entry['version']}" in version
+            )
+        )
+        if not expected_properties or expected_module_id not in metadata:
+            raise ValueError(f"{entry['id']}: module identity or version mismatch")
+        if f"version: {entry['version']}" not in metadata or not service:
+            raise ValueError(f"{entry['id']}: incomplete module metadata or service registration")
         print(f"verified {entry['id']} {digest}")
 
 
