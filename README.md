@@ -15,6 +15,7 @@ module identifier, release version, and an `artifact` value with:
 Validate structure and the release assets before accepting catalog changes:
 
 ```sh
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/validate_catalog.py
 ```
 
@@ -22,3 +23,8 @@ The validator uses only the Python standard library. It rejects unexpected
 schema values and downloads each declared immutable release asset over HTTPS to
 verify its digest. A successful result is catalog-source evidence; it is not
 evidence of real-host installation or browser acceptance.
+
+The catalog contains all twelve official module identifiers. Validation checks each
+released JAR for matching metadata and the current `org.zalava.api.ZalavaModule`
+service descriptor, and rejects artifacts that bundle the public SDK. CI runs
+the regression suite and anonymously verifies every pinned release asset.
