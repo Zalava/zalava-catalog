@@ -12,14 +12,14 @@ modules:
       sha256: 9f3cc1a4b65645c699b8d0739d61f5c1b8d86c83fc61ee8ffd89cb8ae4476b61
   - id: channel-telegram
     displayName: Channel Telegram
-    version: 0.1.0-alpha.6
+    version: 0.1.0-alpha.7
     artifact:
       type: github-release-assets
       repositoryId: zalava-channel-telegram
       repositoryUri: https://github.com/Zalava/zalava-module-channel-telegram
-      releaseTag: v0.1.0-alpha.6
-      assetName: zalava-module-channel-telegram-0.1.0-alpha.6.jar
-      sha256: 5b5ee53fbf09902b3f56830d4dfd0e7fd1aa0c3611404da5becc3f01db7fd218
+      releaseTag: v0.1.0-alpha.7
+      assetName: zalava-module-channel-telegram-0.1.0-alpha.7.jar
+      sha256: aa1e75c098c758976a3bc5e17bae0865784160f743e8a114bf509e40395c5e9c
   - id: docker
     displayName: Docker
     version: 0.1.0-alpha.3
