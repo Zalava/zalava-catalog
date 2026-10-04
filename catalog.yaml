@@ -1,122 +1,94 @@
-schemaVersion: 1
-modules:
-  - id: brave-search
-    displayName: Brave Search
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-brave-search
-      repositoryUri: https://github.com/Zalava/zalava-module-brave-search
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-brave-search-0.1.0-alpha.3.jar
-      sha256: 9f3cc1a4b65645c699b8d0739d61f5c1b8d86c83fc61ee8ffd89cb8ae4476b61
-  - id: channel-telegram
-    displayName: Channel Telegram
-    version: 0.1.0-alpha.7
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-channel-telegram
-      repositoryUri: https://github.com/Zalava/zalava-module-channel-telegram
-      releaseTag: v0.1.0-alpha.7
-      assetName: zalava-module-channel-telegram-0.1.0-alpha.7.jar
-      sha256: aa1e75c098c758976a3bc5e17bae0865784160f743e8a114bf509e40395c5e9c
-  - id: docker
-    displayName: Docker
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-docker
-      repositoryUri: https://github.com/Zalava/zalava-module-docker
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-docker-0.1.0-alpha.3.jar
-      sha256: d204c23c8d0844ae6e2c5ceb79203d088ee94312490bade09e317adfb66ce4c7
-  - id: filesystem
-    displayName: Filesystem
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-filesystem
-      repositoryUri: https://github.com/Zalava/zalava-module-filesystem
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-filesystem-0.1.0-alpha.3.jar
-      sha256: b35810796c498ba765dddc6ce914b8024952162ee654cfcf32e56074951457f0
-  - id: home-assistant
-    displayName: Home Assistant
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-home-assistant
-      repositoryUri: https://github.com/Zalava/zalava-module-home-assistant
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-home-assistant-0.1.0-alpha.3.jar
-      sha256: e692997367b862827b907ca640d6cd8de05193efddb841f1707b6a32e0387a88
-  - id: mcp-bridge
-    displayName: MCP Bridge
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-mcp-bridge
-      repositoryUri: https://github.com/Zalava/zalava-module-mcp-bridge
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-mcp-bridge-0.1.0-alpha.3.jar
-      sha256: 9a6459b5585d3956fd69d2f4f7708749d5717f12cf93299c3a84a73415d5612c
-  - id: playwright-browser
-    displayName: Playwright Browser
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-playwright-browser
-      repositoryUri: https://github.com/Zalava/zalava-module-playwright-browser
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-playwright-browser-0.1.0-alpha.3.jar
-      sha256: fe644ac8efd9b6d284202baa0a62ca2fb61b51498a5befee70c7f5b8e4f7a61b
-  - id: shopping-list
-    displayName: Shopping List
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-shopping-list
-      repositoryUri: https://github.com/Zalava/zalava-module-shopping-list
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-shopping-list-0.1.0-alpha.3.jar
-      sha256: b2b202c23ec5e98fa5d144ff3164e50d4df975714fedeb55a753ec880226a0e5
-  - id: tasks
-    displayName: Tasks
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-tasks
-      repositoryUri: https://github.com/Zalava/zalava-module-tasks
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-tasks-0.1.0-alpha.3.jar
-      sha256: 080d93d626d3e8661839dba4204d5bd4a47b0f9520848534150f08d0ee1c10dd
-  - id: tika
-    displayName: Tika
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-tika
-      repositoryUri: https://github.com/Zalava/zalava-module-tika
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-tika-0.1.0-alpha.3.jar
-      sha256: 1678e898057637ffcdce8d4d5cb123776d09f52e383f228c8645866c8b4be92b
-  - id: time
-    displayName: Time
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-time
-      repositoryUri: https://github.com/Zalava/zalava-module-time
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-time-0.1.0-alpha.3.jar
-      sha256: 10dfca7693d1c51b75f74af87833f17cf2c29d28293e635fd593283bbc654287
-  - id: web-fetch
-    displayName: Web Fetch
-    version: 0.1.0-alpha.3
-    artifact:
-      type: github-release-assets
-      repositoryId: zalava-web-fetch
-      repositoryUri: https://github.com/Zalava/zalava-module-web-fetch
-      releaseTag: v0.1.0-alpha.3
-      assetName: zalava-module-web-fetch-0.1.0-alpha.3.jar
-      sha256: 285d2825fdf568c0b086c559875a080f3444adc0b6b5fc2ee32c14764a0e9af0
+{
+  "schemaVersion": 1,
+  "repository": {
+    "type": "module-locator",
+    "indexRepository": "https://github.com/Zalava/zalava-catalog",
+    "indexPath": "catalog.yaml"
+  },
+  "modules": [
+    {
+      "moduleId": "zalava-module-brave-search",
+      "displayName": "Brave Search",
+      "description": "Brave Search module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-brave-search",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-channel-telegram",
+      "displayName": "Telegram Channel",
+      "description": "Telegram Channel module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-channel-telegram",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-docker",
+      "displayName": "Docker",
+      "description": "Docker module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-docker",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-filesystem",
+      "displayName": "Filesystem",
+      "description": "Filesystem module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-filesystem",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-home-assistant",
+      "displayName": "Home Assistant",
+      "description": "Home Assistant module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-home-assistant",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-mcp-bridge",
+      "displayName": "MCP Bridge",
+      "description": "MCP Bridge module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-mcp-bridge",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-playwright-browser",
+      "displayName": "Playwright Browser",
+      "description": "Playwright Browser module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-playwright-browser",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-shopping-list",
+      "displayName": "Shopping List",
+      "description": "Shopping List module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-shopping-list",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-tasks",
+      "displayName": "Tasks",
+      "description": "Tasks module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-tasks",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-tika",
+      "displayName": "Tika",
+      "description": "Tika module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-tika",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-time",
+      "displayName": "Time",
+      "description": "Time module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-time",
+      "releaseIndexPath": "releases/index.yaml"
+    },
+    {
+      "moduleId": "zalava-module-web-fetch",
+      "displayName": "Web Fetch",
+      "description": "Web Fetch module for Zalava",
+      "repository": "https://github.com/Zalava/zalava-module-web-fetch",
+      "releaseIndexPath": "releases/index.yaml"
+    }
+  ]
+}

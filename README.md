@@ -1,30 +1,17 @@
-# Zalava official module catalog
+# Zalava module catalog
 
-This repository is the auditable catalog of official, installable Zalava module
-artifacts. It deliberately records immutable GitHub Release assets rather than
-branch or package coordinates.
+This public catalog locates stable module source repositories and their
+`releases/index.yaml` paths. It contains no module versions, release tags,
+artifact names or digests. A module release never requires a catalog update.
 
-`catalog.yaml` is schema version 1. Every module entry contains its stable
-module identifier, release version, and an `artifact` value with:
+The host resolves the module-owned index at an immutable Git commit and obtains
+versions, artifacts, checksums, license, compatibility and permissions there.
+Preparation pins that evidence; the administrator explicitly approves installation.
+Module repositories own release-index validation and publication.
 
-- `type`: currently `github-release-assets` only;
-- `repositoryId` and canonical GitHub `repositoryUri`;
-- immutable `releaseTag` and exact release `assetName`; and
-- the lowercase SHA-256 digest of that asset.
-
-Validate structure and the release assets before accepting catalog changes:
-
-```sh
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s scripts -p 'test_*.py'
-python3 scripts/validate_catalog.py
-```
-
-The validator uses only the Python standard library. It rejects unexpected
-schema values and downloads each declared immutable release asset over HTTPS to
-verify its digest. A successful result is catalog-source evidence; it is not
-evidence of real-host installation or browser acceptance.
-
-The catalog contains all twelve official module identifiers. Validation checks each
-released JAR for matching metadata and the current `org.zalava.api.ZalavaModule`
-service descriptor, and rejects artifacts that bundle the public SDK. CI runs
-the regression suite and anonymously verifies every pinned release asset.
+`catalog.yaml` uses JSON syntax, a valid YAML subset accepted by the host loader.
+Run `python scripts/validate_catalog.py` and
+`python -m unittest discover -s scripts` for deterministic locator checks.
+Run `python scripts/validate_catalog.py --verify-sources` after module index PRs
+merge to check the actual public default-branch source locations. Missing indexes
+fail that check; they are never treated as successful discovery.
