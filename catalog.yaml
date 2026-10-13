@@ -9,84 +9,84 @@
     {
       "moduleId": "zalava-module-brave-search",
       "displayName": "Brave Search",
-      "description": "Brave Search module for Zalava",
+      "description": "Provider-scoped web search backed by Brave Search.",
       "repository": "https://github.com/Zalava/zalava-module-brave-search",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-channel-telegram",
       "displayName": "Telegram Channel",
-      "description": "Telegram Channel module for Zalava",
+      "description": "Telegram long-polling channel adapter for Zalava semantic channel events.",
       "repository": "https://github.com/Zalava/zalava-module-channel-telegram",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-docker",
       "displayName": "Docker",
-      "description": "Docker module for Zalava",
+      "description": "Bounded Docker Engine lifecycle for Zalava-managed services and opt-in user-requested container management.",
       "repository": "https://github.com/Zalava/zalava-module-docker",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-filesystem",
       "displayName": "Filesystem",
-      "description": "Filesystem module for Zalava",
+      "description": "Zalava filesystem providers constrained to configured roots.",
       "repository": "https://github.com/Zalava/zalava-module-filesystem",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-home-assistant",
       "displayName": "Home Assistant",
-      "description": "Home Assistant module for Zalava",
+      "description": "Read-only Home Assistant status and entity discovery, with optional Zalava-managed Home Assistant Container setup.",
       "repository": "https://github.com/Zalava/zalava-module-home-assistant",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-mcp-bridge",
       "displayName": "MCP Bridge",
-      "description": "MCP Bridge module for Zalava",
+      "description": "Bridges configured MCP services into Zalava providers.",
       "repository": "https://github.com/Zalava/zalava-module-mcp-bridge",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-playwright-browser",
       "displayName": "Playwright Browser",
-      "description": "Playwright Browser module for Zalava",
+      "description": "Provider-scoped browser automation backed by Playwright for Java.",
       "repository": "https://github.com/Zalava/zalava-module-playwright-browser",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-shopping-list",
       "displayName": "Shopping List",
-      "description": "Shopping List module for Zalava",
+      "description": "Private household shopping-list tools backed by local SQLite storage",
       "repository": "https://github.com/Zalava/zalava-module-shopping-list",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-tasks",
       "displayName": "Tasks",
-      "description": "Tasks module for Zalava",
+      "description": "Create and schedule host-owned tasks and jobs, including recurring schedules.",
       "repository": "https://github.com/Zalava/zalava-module-tasks",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-tika",
       "displayName": "Tika",
-      "description": "Tika module for Zalava",
+      "description": "Extract text from PDF documents and other supported files for chat attachments and Knowledge. Scanned documents require an optional OCR worker.",
       "repository": "https://github.com/Zalava/zalava-module-tika",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-time",
       "displayName": "Time",
-      "description": "Time module for Zalava",
+      "description": "Timezone-aware current-time and conversion tools backed by the JDK time API",
       "repository": "https://github.com/Zalava/zalava-module-time",
       "releaseIndexPath": "releases/index.yaml"
     },
     {
       "moduleId": "zalava-module-web-fetch",
       "displayName": "Web Fetch",
-      "description": "Web Fetch module for Zalava",
+      "description": "Bounded HTTP(S) fetch and deterministic text extraction.",
       "repository": "https://github.com/Zalava/zalava-module-web-fetch",
       "releaseIndexPath": "releases/index.yaml"
     }
