@@ -7,6 +7,12 @@ class CatalogTest(unittest.TestCase):
     def test_current_locator(self):
         catalog.validate(catalog.parse())
 
+    def test_common_missing_capabilities_are_described_for_discovery(self):
+        modules = {m["moduleId"]: m for m in catalog.parse()["modules"]}
+        self.assertIn("job", modules["zalava-module-tasks"]["description"].lower())
+        self.assertIn("pdf", modules["zalava-module-tika"]["description"].lower())
+        self.assertIn("document", modules["zalava-module-tika"]["description"].lower())
+
     def test_rejects_release_inventory_and_source_mismatch(self):
         for key, value in (("version", "0.1.0-alpha.4"), ("artifact", {}),
                            ("repository", "https://github.com/other/source"),
